@@ -14,40 +14,19 @@
 
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <h1>Donation Portal</h1>
-    </div>
-    <div class="row">
-        <button id="captchaButton" class="btn btn-primary">Submit CAPTCHA</button>
-    </div>
-
-    <div class="row">
-        <!-- This image will be displayed after successful CAPTCHA verification -->
-        <img id="placeholderImage" src="path_to_placeholder_image.jpg" alt="Image of a Paper" style="display: none;">
-    </div>
+<div class="row">
+    <h1>
+        Donation Portal
+    </h1>
 </div>
 
-<script>
-    function onClick(e) {
-        e.preventDefault();
-        // Call the reCAPTCHA enterprise to execute CAPTCHA and get the token
-        grecaptcha.enterprise.ready(async () => {
-            const token = await grecaptcha.enterprise.execute('6Lf0Zl4qAAAAAAkBH80KSvveZtPbgjHZ_JrSOCci', { action: 'LOGIN' });
+<div class="g-recaptcha" data-sitekey="6LfJzF4qAAAAALXCzt0YbG4tZirZYeOewOlFj9ov"></div>
 
-            // You would typically send the token to the backend for verification here.
-            console.log("CAPTCHA token: ", token); // Log the token (replace this with your backend request)
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-            // For now, we'll simulate that the CAPTCHA was successful and show the image.
-            if (token) {
-                document.getElementById('placeholderImage').style.display = 'block';
-            }
-        });
-    }
 
-    // Add event listener to the CAPTCHA button
-    document.getElementById('captchaButton').addEventListener('click', onClick);
-</script>
+<img id="placeholderImage" src="path_to_placeholder_image.jpg" alt="Image of a Paper" style="display: none;">
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 <!-- d3 -->

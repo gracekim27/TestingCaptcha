@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 // Replace with your secret key from Google reCAPTCHA
-const RECAPTCHA_SECRET_KEY = 'your_secret_key';  // Replace with your reCAPTCHA secret key
+const RECAPTCHA_SECRET_KEY = '6LfJzF4qAAAAAH1usfRX4ceprJluNUJp2yNsR2mx';  // Replace with your reCAPTCHA secret key
 
 // Endpoint to verify CAPTCHA
 app.post('/verifyCaptcha', async (req, res) => {
