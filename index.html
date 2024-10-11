@@ -5,32 +5,24 @@
     <title>Captcha</title>
 
     <!-- CSS LIBRARIES -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.css" integrity="sha512-DGB74Gyw93qON+V0QxSRs1er6sqoPyFoy23HBL5LN7MRJBcjeCU22zega+vOEGE0XQLoVrv4ExcaesSTwZQA2w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <!-- YOUR CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- reCAPTCHA Enterprise -->
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf0Zl4qAAAAAAkBH80KSvveZtPbgjHZ_JrSOCci"></script>
+
 </head>
 <body>
-
 <div class="row">
-    <h1>Captcha Page</h1>
+    <div class="g-recaptcha" data-sitekey="6LfJzF4qAAAAALXCzt0YbG4tZirZYeOewOlFj9ov"></div>
 </div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<img id="placeholderImage" src="earth.jpeg" alt="Placeholder Image" style="display:none;">
 
-<div class="g-recaptcha" data-sitekey="6LfJzF4qAAAAALXCzt0YbG4tZirZYeOewOlFj9ov"></div>
 
-<!-- Placeholder image (initially hidden) -->
-<img id="placeholderImage" src="earth.jpg" alt="Placeholder Image" style="display:none;">
-
-<!-- JavaScript Libraries -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<!-- d3 -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
-
-<!-- Your main JavaScript file -->
 <script src="js/main.js"></script>
-
 </body>
 </html>
