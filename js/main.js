@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Log Prolific ID when the user joins (on page load)
     if (prolificID) {
-      fetch('https://script.google.com/macros/s/AKfycbxmguNVGXbzuFvlT9HuWDSvcSv_cAhZvflpHGv8CmckOi2AfYOiEfeBenQ9bGBLMKGa/exec', {  // Replace with your Apps Script Web App URL
+      fetch('https://script.google.com/macros/s/AKfycbxmguNVGXbzuFvlT9HuWDSvcSv_cAhZvflpHGv8CmckOi2AfYOiEfeBenQ9bGBLMKGa/exec?sheetName=Sheet1', {  // Replace with your Apps Script Web App URL
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prolificID, event: 'joined' })
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (token && prolificID) {
         // Send CAPTCHA completion log to Google Apps Script
-        fetch('https://script.google.com/macros/s/AKfycbxmguNVGXbzuFvlT9HuWDSvcSv_cAhZvflpHGv8CmckOi2AfYOiEfeBenQ9bGBLMKGa/exec', {  // Replace with your Apps Script Web App URL
+        fetch('https://script.google.com/macros/s/AKfycbxmguNVGXbzuFvlT9HuWDSvcSv_cAhZvflpHGv8CmckOi2AfYOiEfeBenQ9bGBLMKGa/exec?sheetName=Sheet1', {  // Replace with your Apps Script Web App URL
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ prolificID, event: 'captcha_completed', token })
