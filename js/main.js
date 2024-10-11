@@ -1,13 +1,10 @@
-// Main.js
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Get Prolific ID from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const prolificID = urlParams.get('prolificID');
   
     // Log Prolific ID when the user joins
     if (prolificID) {
-      fetch('https://script.google.com/macros/s/AKfycbxmguNVGXbzuFvlT9HuWDSvcSv_cAhZvflpHGv8CmckOi2AfYOiEfeBenQ9bGBLMKGa/exec', {  // Replace with your Apps Script URL
+      fetch('https://script.google.com/macros/s/AKfycbxmguNVGXbzuFvlT9HuWDSvcSv_cAhZvflpHGv8CmckOi2AfYOiEfeBenQ9bGBLMKGa/exec', {  // Replace with your Apps Script Web App URL
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prolificID, event: 'joined' })
@@ -16,25 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => console.log('Prolific ID logged for join:', data))
       .catch(error => console.error('Error logging join event:', error));
     }
-  });
-  
-  function onClick(e) {
-    e.preventDefault();
-    
-    const urlParams = new URLSearchParams(window.location.search);
-    const prolificID = urlParams.get('prolificID');
-  
-    if (!prolificID) {
-      console.error('No Prolific ID found in the URL');
-      return;
-    }
+});
 
+function onClick(e) {
+    e.preventDefault();
     grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6Lf0Zl4qAAAAAAkBH80KSvveZtPbgjHZ_JrSOCci', { action: 'LOGIN' });
-  
-      if (token) {
-        // Send CAPTCHA completion log to Google Sheets
-        fetch('https://script.google.com/macros/s/AKfycbxmguNVGXbzuFvlT9HuWDSvcSv_cAhZvflpHGv8CmckOi2AfYOiEfeBenQ9bGBLMKGa/exec', {  // Same Apps Script URL as above
+      const token = await grecaptcha.enterprise.execute('6LfJzF4qAAAAALXCzt0YbG4tZirZYeOewOlFj9ov', { action: 'submit' });
+      const urlParams = new URLSearchParams(window.location.search);
+      const prolificID = urlParams.get('prolificID');
+
+      if (token && prolificID) {
+        // Send CAPTCHA completion log to Google Apps Script
+        fetch('https://script.google.com/macros/s/AKfycbxmguNVGXbzuFvlT9HuWDSvcSv_cAhZvflpHGv8CmckOi2AfYOiEfeBenQ9bGBLMKGa/exec', {  // Replace with your Apps Script Web App URL
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ prolificID, event: 'captcha_completed' })
@@ -46,9 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error logging CAPTCHA completion:', error));
       } else {
-        console.error('CAPTCHA failed, no token received.');
+        console.error('CAPTCHA token or Prolific ID missing.');
       }
     });
-  }
-  
-  document.getElementById('captchaButton').addEventListener('click', onClick);
+}
+
+document.getElementById('captchaButton').addEventListener('click', onClick);
