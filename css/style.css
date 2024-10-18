@@ -1,6 +1,21 @@
 h1{
-    padding: 3%;
+    padding: 2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:aliceblue;
+    text-shadow: 1px 10px 7px blue;
+    background-color:darkorchid
 }
+
+h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:black;
+    background-color: #02e33e;
+    padding: 1em;
+    font-size: medium;
+    width: 75%;
+    border-radius: 10%;
+}
+
 
 
 #container{
