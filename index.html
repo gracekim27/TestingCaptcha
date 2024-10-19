@@ -17,19 +17,32 @@
     <div class="row">
         <div class="header">
             <h1>
-                EZVerificatoin
+                EZ-Verification
             </h1>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-4">
+        <div class="col-1">
+            
+        </div>
+        <div class="col-4" id="captcha-container">
+            <h3>
+
+            </h3>
             <h2>
                 Complete captcha to continue ↓
             </h2>
+            <div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LfJzF4qAAAAALXCzt0YbG4tZirZYeOewOlFj9ov"></div>
         </div>
-        <div class="col-8">
-            <img src="safe.png" width="20%" height=auto">
+        <div class="col-3" id="captcha-container">
+            <p>
+                Button unlocking after finish the captcha
+            </p>
+            <img src="download-button.png" style="width: 75%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="col-3">
+            <img src="planet-fitness-banner-ad.png" style="width: 50%; height: auto;">
         </div>
     </div>
 
@@ -37,7 +50,7 @@
         <div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LfJzF4qAAAAALXCzt0YbG4tZirZYeOewOlFj9ov"></div>
     </div>
 
-    <img id="placeholderImage" src="earth.jpeg" alt="Placeholder Image" style="display:none; height: 300px; width: auto;">
+    <img id="placeholderImage" src="safe.png" alt="Placeholder Image" style="display:none; height: 300px; width: auto;">
 </div>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>

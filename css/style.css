@@ -1,24 +1,43 @@
-h1{
+h1 {
     padding: 2%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:aliceblue;
-    text-shadow: 1px 10px 7px blue;
-    background-color:darkorchid
+    color: green;
+    background-color: white;
+    border-bottom: solid black;
+    font-size: 4em;
+    font-weight: 600;
+    text-shadow: 0px 0px 0 rgb(71, 169, 255, 0.3), 1px 1px 0 yellow,2px 2px 0 yellowgreen,3px 3px 0 rgb(42,-159,42),4px 4px 0 rgb(-9,-210,-9), 5px 5px 0 rgb(-60,-261,-60),6px 6px 5px rgba(0,0,0,0.3),6px 6px 1px rgba(0,0,0,0.5),0px 0px 5px rgba(0,0,0,.2);
 }
+
 
 h2{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:black;
-    background-color: #02e33e;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, rgb(0, 255, 13), rgb(1, 195, 63));
     padding: 1em;
-    font-size: medium;
-    width: 75%;
-    border-radius: 10%;
+    font-size: large;
+    width: 65%;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 2px 2px 1px green;
 }
 
-
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+    text-align: center;
+    padding-top: 3em;
+}
 
 #container{
     padding: 1%;
     margin-left: 3%;
+}
+
+
+#captcha-container{
+    margin-top: 1em;
+    border: solid black;
+    margin-left: 1em;
 }
