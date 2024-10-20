@@ -37,3 +37,24 @@ document.addEventListener('DOMContentLoaded', () => {
         grecaptcha.reset(captchaWidgetId);
     };
 });
+
+// Get elements
+const popup = document.getElementById('popup');
+const closeBtn = document.querySelector('.close-btn');
+
+// Show the popup when the page loads
+window.onload = function() {
+    popup.style.display = 'flex'; // Show the popup
+};
+
+// Close the popup when the close button is clicked
+closeBtn.addEventListener('click', function() {
+    popup.style.display = 'none'; // Hide the popup
+});
+
+// Close the popup when the user clicks outside the popup content
+window.addEventListener('click', function(event) {
+    if (event.target === popup) {
+        popup.style.display = 'none'; // Hide the popup
+    }
+});
